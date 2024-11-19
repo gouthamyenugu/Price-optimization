@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Optimization Form</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Body Styling */
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      background-size: cover;
+      color: #333;
+    }
+
+    /* Form Container */
+    .form-container {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+    }
+
+    /* Form Title */
+    .form-container h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    /* Form Labels */
+    label {
+      display: block;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    /* Form Inputs */
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #74ebd5;
+    }
+
+    /* Submit Button */
+    button {
+      display: inline-block;
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background: #4caf50;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    /* Form Footer */
+    .form-footer {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Price Optimization</h1>
+    <form  method="post">
+      <label for="qty">Quantity (Qty):</label>
+      <input type="number" id="qty" name="qty" placeholder="Enter quantity" required>
+
+      <label for="unit_price">Unit Price:</label>
+      <input type="number" step="0.01" id="unit_price" name="unit_price" placeholder="Enter unit price" required>
+
+      <label for="lag_price">Lag Price:</label>
+      <input type="number" step="0.01" id="lag_price" name="lag_price" placeholder="Enter lag price" required>
+
+      <label for="volume">Volume:</label>
+      <input type="number" id="volume" name="volume" placeholder="Enter volume" required>
+
+      <label for="customers">Customers:</label>
+      <input type="number" id="customers" name="customers" placeholder="Enter number of customers" required>
+
+      <label for="s">Seasonality:</label>
+      <input type="number" id="s" name="s" step="any" placeholder="Enter the Seasonal sales" required>
+
+
+      <button type="submit">Optimize Price</button>
+    </form>
+    <div class="form-footer">
+      <p>Optimize your pricing strategy efficiently.</p>
+    </div>
+  </div>
+</body>
+</html>

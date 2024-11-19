@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Result</title>
+  <style>
+    /* Reset and Base Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to bottom right, #1E3C72, #2A5298);
+      color: #fff;
+    }
+
+    /* Card Styling */
+    .result-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      width: 90%;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .result-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .result-container p {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      color: #f0f0f0;
+    }
+
+    .highlight {
+      font-size: 2rem;
+      color: #FFD700;
+      font-weight: bold;
+    }
+
+    /* Buttons Styling */
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #45A049;
+    }
+
+    .button-secondary {
+      background-color: #3498db;
+    }
+
+    .button-secondary:hover {
+      background-color: #2980b9;
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="result-container">
+    <h1>Prediction Result</h1>
+    <p>The optimized price for your input is:</p>
+    <p class="highlight">{{ prediction }}</p> <!-- Dynamically rendered value -->
+
+    <!-- Additional Information -->
+    <p>We used your inputs to calculate the optimal value to maximize your revenue.</p>
+
+    <!-- Buttons -->
+    <div class="button-container">
+      <a href="/" class="button">Go to Home</a>
+      <a href="/predict" class="button button-secondary">New Prediction</a>
+    </div>
+  </div>
+</body>
+</html>

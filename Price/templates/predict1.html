@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Input Form</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Body and Background */
+    body {
+      background: linear-gradient(135deg, #FFDEE9, #B5FFFC); /* Soft pink to aqua gradient */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333; /* Dark text for contrast */
+    }
+
+    /* Form Container */
+    .form-container {
+      background: rgba(255, 255, 255, 0.9); /* Light white background */
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 90%;
+      max-width: 450px;
+      max-height: 90vh; /* Limit the form height */
+      overflow-y: auto; /* Enable scrolling if content exceeds the height */
+    }
+
+    /* Form Title */
+    .form-container h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #4A4A4A; /* Calm dark gray */
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Input Fields */
+    .form-container .input-group {
+      margin-bottom: 15px;
+    }
+
+    .form-container label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: block;
+      font-weight: bold;
+      color: #333; /* Dark text for readability */
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      outline: none;
+      background: #F9F9F9; /* Light background for inputs */
+      color: #333;
+    }
+
+    .form-container input::placeholder {
+      color: #888;
+    }
+
+    /* Submit Button */
+    .form-container button {
+      background: #6AC47E; /* Soft green */
+      border: none;
+      color: #fff;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background: #5CA76A; /* Slightly darker green on hover */
+    }
+
+    /* Ensure Form is Responsive */
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 15px;
+      }
+
+      .form-container h1 {
+        font-size: 20px;
+      }
+
+      .form-container button {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>User Input Form</h1>
+    <form action="/pred1" method="post">
+      <div class="input-group">
+        <label for="comp_2">Comp 2</label>
+        <input type="text" id="comp_2" name="comp_2" placeholder="Enter value for Comp 2">
+      </div>
+      <div class="input-group">
+        <label for="product_name_lenght">Product Name Length</label>
+        <input type="number" id="product_name_lenght" name="product_name_lenght" placeholder="Enter product name length">
+      </div>
+      <div class="input-group">
+        <label for="comp_3">Comp 3</label>
+        <input type="text" id="comp_3" name="comp_3" placeholder="Enter value for Comp 3">
+      </div>
+      <div class="input-group">
+        <label for="product_weight_g">Product Weight (g)</label>
+        <input type="number" id="product_weight_g" name="product_weight_g" placeholder="Enter product weight in grams">
+      </div>
+      <div class="input-group">
+        <label for="freight_price">Freight Price</label>
+        <input type="number" id="freight_price" name="freight_price" placeholder="Enter freight price" step="any">
+      </div>
+      <div class="input-group">
+        <label for="product_description_lenght">Product Description Length</label>
+        <input type="number" id="product_description_lenght" name="product_description_lenght" placeholder="Enter product description length">
+      </div>
+      <div class="input-group">
+        <label for="comp_1">Comp 1</label>
+        <input type="text" id="comp_1" name="comp_1" placeholder="Enter value for Comp 1">
+      </div>
+      <div class="input-group">
+        <label for="product_score">Product Score</label>
+        <input type="number" id="product_score" name="product_score" placeholder="Enter product score">
+      </div>
+      <div class="input-group">
+        <label for="volume">Volume</label>
+        <input type="number" id="volume" name="volume" placeholder="Enter volume">
+      </div>
+      <div class="input-group">
+        <label for="product_id">Product ID</label>
+        
+        <select id="product_id" name="product_id" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; background: #F9F9F9; color: #333;">
+          <option value="0">bed1</option>
+          <option value="1">bed2</option>
+          <option value="2">bed3</option>
+          <option value="3">bed4</option>
+          <option value="4">bed5</option>
+          <option value="5">bed7</option>
+          <option value="6">computers1</option>
+          <option value="7">computers2</option>
+          <option value="8">computers3</option>
+          <option value="9">computers4</option>
+          <option value="10">computers5</option>
+          <option value="11">computers6</option>
+          <option value="12">computers8</option>
+          <option value="13">consoles1</option>
+          <option value="14">consoles2</option>
+          <option value="15">cool1</option>
+          <option value="16">cool2</option>
+          <option value="17">cool3</option>
+          <option value="18">cool4</option>
+          <option value="19">cool5</option>
+          <option value="20">furniture1</option>
+          <option value="21">furniture2</option>
+          <option value="22">furniture3</option>
+          <option value="23">furniture4</option>
+          <option value="24">furniture7</option>
+          <option value="25">garden1</option>
+          <option value="26">garden10</option>
+          <option value="27">garden2</option>
+          <option value="28">garden3</option>
+          <option value="29">garden4</option>
+          <option value="30">garden5</option>
+          <option value="31">garden6</option>
+          <option value="32">garden7</option>
+          <option value="33">garden8</option>
+          <option value="34">garden9</option>
+          <option value="35">health1</option>
+          <option value="36">health10</option>
+          <option value="37">health2</option>
+          <option value="38">health3</option>
+          <option value="39">health4</option>
+          <option value="40">health5</option>
+          <option value="41">health6</option>
+          <option value="42">health7</option>
+          <option value="43">health8</option>
+          <option value="44">health9</option>
+          <option value="45">perfumery1</option>
+          <option value="46">perfumery2</option>
+          <option value="47">watches1</option>
+          <option value="48">watches2</option>
+          <option value="49">watches3</option>
+          <option value="50">watches4</option>
+          <option value="51">watches5</option>
+          <option value="52">watches6</option>
+          <option value="53">watches7</option>
+          <option value="54">watches8</option>
+        </select>
+      </div>
+      
+      <div class="input-group">
+        <label for="fp1">FP1</label>
+        <input type="number" id="fp1" name="fp1" placeholder="Enter FP1 value" step="any">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
